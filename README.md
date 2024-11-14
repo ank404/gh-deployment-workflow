@@ -1,4 +1,3 @@
-```markdown
 # GitHub Actions CI/CD Deployment Workflow
 
 This project demonstrates the setup of a continuous integration and continuous deployment (CI/CD) pipeline using GitHub Actions to deploy a static website to GitHub Pages. This workflow automatically deploys any changes made to the `index.html` file on the `main` branch to GitHub Pages, allowing for seamless updates to the website.
@@ -111,6 +110,3 @@ jobs:
 This project showcases how to use GitHub Actions for CI/CD with GitHub Pages. The setup is simple yet powerful, making it easy to automate the deployment of static sites. Feel free to fork this repository and try it out on your own projects!
 
 ---
-
-Happy coding! 🚀
-```
