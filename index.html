@@ -3,10 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Actions Deployment</title>
+    <title>GitHub Actions CI/CD Documentation</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello, GitHub Actions!</h1>
-    <h2>Add new line to check the workflow</h2>
+    <header>
+        <h1>GitHub Actions CI/CD Workflow Documentation</h1>
+        <p>A step-by-step guide to deploying a static site with GitHub Actions.</p>
+    </header>
+    
+    <main>
+        <section id="steps">
+            <h2>Steps to Set Up the Workflow</h2>
+            <div class="step">
+                <h3>1. Create a New GitHub Repository</h3>
+                <p>Create a repository named <strong>gh-deployment-workflow</strong> and add basic files like <code>index.html</code> and <code>README.md</code>.</p>
+            </div>
+            <div class="step">
+                <h3>2. Set Up GitHub Actions Workflow</h3>
+                <p>Create a <code>.github/workflows/deploy.yml</code> file to define the workflow for GitHub Pages deployment.</p>
+            </div>
+            <div class="step">
+                <h3>3. Configure Workflow Triggers</h3>
+                <p>Set the workflow to trigger on changes to the <code>index.html</code> file on the main branch.</p>
+            </div>
+            <div class="step">
+                <h3>4. Add Deploy Step</h3>
+                <p>Use the <code>peaceiris/actions-gh-pages@v3</code> action to deploy the site to GitHub Pages.</p>
+            </div>
+            <div class="step">
+                <h3>5. Push Changes and Verify</h3>
+                <p>Push your changes and verify that the site deploys successfully to GitHub Pages.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created as a learning project for CI/CD with GitHub Actions</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
