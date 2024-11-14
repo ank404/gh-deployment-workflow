@@ -1,0 +1,32 @@
+name: Deploy to GitHub Pages
+
+# Trigger the workflow on push events to the main branch, but only if index.html is modified
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'index.html'
+
+jobs:
+  deploy:
+    # Run the job on the latest version of Ubuntu
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository code so we can access it in subsequent steps
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      # Step 2: Set up Node.js (required for GitHub Pages deployment action)
+      - name: Setup Node.js (required for GitHub Pages Action)
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14' # Specify the Node.js version
+
+      # Step 3: Deploy the site to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # Use GitHub's provided token for authentication
+          publish_dir: ./ # Set the publish directory to the root
